@@ -7,12 +7,23 @@
     <title>Recados</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="gravado.php" method="post">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome"><br><br>
-        <label for="mensagem">Mensagem: </label>
-        <input type="text" name="mensagem" id="mensagem"><br><br>
+        <label for="mensagem">Mensagem: </label><br><br>
+        <textarea name="mensagem" id="mensagem"></textarea>
         <input type="submit">
     </form>
+    <h1>RECADOS</h1>
+    <?php
+        $recados = unserialize(file_get_contents('recados.txt'));
+        foreach ($recados as $rec) {
+            echo '<div style="1px solid black">';
+            echo '<p>'.$rec['nome'].'</p>';
+            echo '<p>'.$rec['data'].'</p>';
+            echo '<p>'.nl2br($rec['nome']).'</p>';
+            echo '</div>'
+        }
+    ?>
 </body>
 </html>
