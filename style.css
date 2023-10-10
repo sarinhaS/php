@@ -1,0 +1,33 @@
+div{
+    border: 1px solid black;
+    padding:0;
+    margin:10px;
+    background-color: antiquewhite;
+    width: 40%;
+}
+
+body{
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form, h1, div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    background-color: rgb(250, 229, 201);}
+
+h1{
+    background-color: rgb(250, 229, 201);
+}
+
+.input{
+    margin: 10px;
+}

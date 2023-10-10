@@ -17,6 +17,7 @@
     // guarda um novo recado
     file_put_contents('recados.txt', serialize($recados));
 
-    print_r($recados);
+    header('location: index.php');
 
-    header('location: index.html');
+   
+     
